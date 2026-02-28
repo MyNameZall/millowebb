@@ -1,0 +1,277 @@
+body {
+	margin: 0;
+	font-family: 'Comic Sans MS', cursive;
+	background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+	overflow: hidden;
+	text-align: center;
+}
+
+h1 {
+	margin-top: 80px;
+	font-size: 3em;
+	animation: wiggle 1s infinite;
+}
+
+p {
+	font-size: 1.4em;
+}
+
+button {
+	padding: 15px 30px;
+	font-size: 18px;
+	border: none;
+	border-radius: 20px;
+	background: hotpink;
+	color: white;
+	cursor: pointer;
+	transition: 0.3s;
+	margin-top: 20px;
+}
+
+button:hover {
+	transform: scale(1.2) rotate(5deg);
+	background: deeppink;
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(2deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(-2deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+/* LOVE JATUH */
+.love {
+	position: fixed;
+	font-size: 30px;
+	animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+	to {
+		transform: translateY(100vh);
+		opacity: 0;
+	}
+}
+
+/* JUMPSCARE */
+#jumpscare {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+}
+
+#jumpscare img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+/* JUMPSCARE LUCU */
+#jumpscare {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 182, 193, 0.95);
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+	animation: shake 0.4s;
+}
+
+#jumpscare img {
+	width: 250px;
+	animation: zoom 0.4s;
+}
+
+#jumpscare .text {
+	font-size: 2em;
+	margin-top: 20px;
+	color: deeppink;
+}
+
+/* efek lucu */
+@keyframes zoom {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes shake {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-10px);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+	75% {
+		transform: translateX(-10px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+#kabur {
+	position: absolute;
+	padding: 12px 20px;
+	border-radius: 18px;
+	background: #ff69b4;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+#ejekan {
+	font-size: 1.2em;
+	color: #c2185b;
+	margin-top: 10px;
+	animation: wiggle 0.5s;
+}
+
+/* kursor ngilang */
+.nocursor {
+	cursor: none;
+}
+body {
+	margin: 0;
+	font-family: 'Comic Sans MS', cursive;
+	background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+	text-align: center;
+	overflow: hidden;
+}
+
+button {
+	padding: 12px 20px;
+	border-radius: 20px;
+	border: none;
+	background: hotpink;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 10px;
+}
+
+#kabur {
+	position: absolute;
+}
+
+#ejekan {
+	color: #c2185b;
+	font-size: 1.2em;
+}
+
+.love {
+	position: fixed;
+	font-size: 28px;
+	animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+	to {
+		transform: translateY(100vh);
+		opacity: 0;
+	}
+}
+
+/* GAME */
+#arena {
+	width: 100vw;
+	height: 50vh;
+	border-top: 3px dashed deeppink;
+	position: relative;
+	overflow: hidden;
+}
+
+#target {
+	position: absolute;
+	cursor: pointer;
+}
+
+/* JUMPSCARE LUCU */
+#jumpscare {
+	position: fixed;
+	inset: 0;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 182, 193, 0.95);
+	z-index: 999;
+}
+
+#jumpscare img {
+	width: 220px;
+	animation: zoom 0.4s;
+}
+
+.text {
+	font-size: 2em;
+	color: deeppink;
+}
+
+@keyframes zoom {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+.nocursor {
+	cursor: none;
+}
+.shock {
+	background: black;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.shock img {
+	width: 80%;
+	max-width: 320px;
+	border-radius: 20px;
+	animation: zoom 0.4s ease;
+}
+
+@keyframes zoom {
+	from {
+		transform: scale(2);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
